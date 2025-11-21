@@ -89,9 +89,6 @@ body {
   font-size: 14px;
 }
 
-#gallery {
-  /*	min-height: 100vh; */
-}
 .title {
   text-align: center;
   padding-block: 2em;
@@ -315,6 +312,11 @@ input[type="submit"] {
     right: 0;
     z-index: -1;
   }
+}
+
+.tags-bar .nav-link.active-tag {
+  color: #000;
+  background-color: #beb45a;
 }
 
 @media all and (max-width: 650px) {
