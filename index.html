@@ -24,13 +24,6 @@
       href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
     />
     <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script src="./assets/maugallery.js" defer></script>
-    <script src="./assets/scripts.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -66,7 +59,7 @@
     />
     <meta property="og:type" content="website" />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
       content="Nina Carducci, Photographe sur Bordeaux"
@@ -206,62 +199,70 @@
       </div>
       <div id="gallery">
         <h2 class="title">Portfolio</h2>
-        <div class="container py-3">
-          <div class="gallery" style="display: none">
-            <img
-              data-gallery-tag="Concert"
-              class="gallery-item"
-              src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"
-              alt="Photo de Aaron Paul"
-            />
-            <img
-              data-gallery-tag="Entreprises"
-              class="gallery-item"
-              src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplah.jpg"
-              alt="Photo de Ali Morshedlou"
-            />
-            <img
-              data-gallery-tag="Entreprises"
-              class="gallery-item"
-              src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
-              alt="Photo de Jason Goodman"
-            />
-            <img
-              data-gallery-tag="Mariages"
-              class="gallery-item"
-              src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unspla.jpg"
-              alt="Photo de Hannah Busing"
-            />
-            <img
-              data-gallery-tag="Portrait"
-              class="gallery-item"
-              src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash (1).jpg"
-              alt="Photo de Ade Tunji"
-            />
-            <img
-              data-gallery-tag="Mariages"
-              class="gallery-item"
-              src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash (1).jpg"
-              alt="Photo de Jakob Owens"
-            />
-            <img
-              data-gallery-tag="Portrait"
-              class="gallery-item"
-              src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8.jpg"
-              alt="Photo de Nino Van Prattenburg"
-            />
-            <img
-              data-gallery-tag="Concert"
-              class="gallery-item"
-              src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
-              alt="Photo de Austin Neill"
-            />
-            <img
-              data-gallery-tag="Entreprises"
-              class="gallery-item"
-              src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY.jpg"
-              alt="Photo de Mateus Campos Felipe"
-            />
+        <div class="container">
+          <div class="filter">
+            <button data-name="tous" class="active">Tous</button>
+            <button data-name="concert">Concert</button>
+            <button data-name="entreprises">Entreprises</button>
+            <button data-name="mariages">Mariages</button>
+            <button data-name="portrait">Portrait</button>
+          </div>
+          <div class="cards">
+            <div class="card" data-name="concert">
+              <img
+                src="/assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"
+                alt="Photo du concert de Aaron Paul"
+              />
+            </div>
+            <div class="card" data-name="entreprises">
+              <img
+                src="/assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplah.jpg"
+                alt="Photo de ali morshedlou"
+              />
+            </div>
+            <div class="card" data-name="entreprises">
+              <img
+                src="/assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
+                alt="Photo de Jason Goodman"
+              />
+            </div>
+                 <div class="card" data-name="mariages">
+              <img
+                src="/assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unspla.jpg"
+                alt="Photo du mariage de Hannah Busing"
+              />
+            </div>
+            <div class="card" data-name="portrait">
+              <img
+                src="/assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash (1).jpg"
+                alt="Photo de ade tunji"
+              />
+            </div>
+            <div class="card" data-name="mariages">
+              <img
+                src="/assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash (1).jpg"
+                alt="Photo du mariage de Jakob Owens"
+              />
+            </div>
+                 <div class="card" data-name="portrait">
+              <img
+                src="/assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8.jpg"
+                alt="Photo de Nino van prattenburg"
+              />
+            </div>
+            <div class="card" data-name="concert">
+              <img
+                src="/assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
+                alt="Photo du concert de Austin Neill"
+              />
+            </div>
+            <div class="card" data-name="entreprises">
+              <img
+                src="/assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY.jpg"
+                alt="Photo de mateus campos"
+              />
+            </div>
+        </div>
           </div>
         </div>
         <div class="quote">

@@ -238,6 +238,24 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 
+.container .filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container button {
+  padding: 8px 15px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+.container button:active {
+  background: #beb45a;
+}
+
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
