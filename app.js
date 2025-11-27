@@ -3,15 +3,9 @@ const cards = document.querySelectorAll(".card");
 
 btns.forEach((button) => {
   button.addEventListener("click", (e) => {
-    // Retire l’active de TOUS les boutons du filtre uniquement
     btns.forEach((b) => b.classList.remove("active"));
-
-    // Ajoute l’active sur celui cliqué
     e.currentTarget.classList.add("active");
-
-    // Filtrage
     const filter = e.currentTarget.dataset.name;
-
     cards.forEach((card) => {
       if (filter === "tous" || card.dataset.name === filter) {
         card.classList.remove("hide");
