@@ -7,7 +7,7 @@ body {
   font-style: normal;
 }
 .top-header {
-  background-color: white;
+  background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -17,31 +17,25 @@ body {
   padding-block: 30px;
   align-items: center;
 }
-
 .top-header .name {
   font-size: 26px;
 }
-
 .nav ul {
   display: flex;
   list-style-type: none;
   font-size: 14px;
   margin-bottom: 0;
 }
-
 .nav li {
   padding-inline: 10px;
 }
-
 .nav a {
   text-decoration: none;
   color: #000;
 }
-
 .social-link img {
   width: 20px;
 }
-
 #about {
   display: flex;
   background-color: #f6d2b8;
@@ -49,8 +43,7 @@ body {
   padding-block: 100px;
   position: relative;
 }
-
-.picture.left::before {
+.nina-pic::before {
   content: " ";
   background-color: #e5975f;
   width: 374px;
@@ -60,18 +53,20 @@ body {
   left: 0;
   z-index: -1;
 }
-
 .picture {
   flex: 1;
   margin: 0 20px;
   z-index: 0;
+  margin-right: -200px;
+  height: 418px;
+  width: 418px;
 }
-
 .picture img {
   width: 100%;
 }
 #about-me {
   flex: 2;
+  margin-left: 25px;
 }
 .about-me__title {
   margin-top: 1em;
@@ -88,7 +83,6 @@ body {
   width: 80%;
   font-size: 14px;
 }
-
 .title {
   text-align: center;
   padding-block: 2em;
@@ -126,13 +120,12 @@ body {
 .mg-next {
   width: 30px;
   height: 30px;
-  border-radius: 00%;
+  border-radius: 0;
   justify-content: center;
   align-items: center;
   display: flex;
   font-size: 24px;
 }
-
 .quote {
   font-family: "Spectral";
   font-style: italic;
@@ -146,11 +139,8 @@ body {
   font-weight: 300;
 }
 .quote__author {
-  font-family: Spectral;
-  font-weight: 800;
-  font-size: 22px;
+  font: 800 22px Spectral;
 }
-
 #services {
   margin: auto;
   background-color: #a8d5d8;
@@ -166,15 +156,13 @@ body {
   left: 0;
   z-index: 0;
 }
-
 #services .container {
   justify-content: space-between;
   display: flex;
   padding: 2em 0;
 }
-
 .service {
-  background-color: white;
+  background-color: #fff;
   max-width: 390px;
   width: 30%;
   height: 337px;
@@ -184,7 +172,6 @@ body {
   justify-content: space-between;
   z-index: 1;
 }
-
 #contact {
   margin: auto;
   background-color: #d8d3a8;
@@ -192,7 +179,6 @@ body {
   padding-inline: 100px;
   padding-block: 100px;
 }
-
 #contact .container {
   display: flex;
 }
@@ -208,6 +194,7 @@ body {
 }
 .form-container {
   flex: 2;
+  margin-left: -195px;
 }
 form {
   display: flex;
@@ -215,7 +202,6 @@ form {
   width: 70%;
   align-items: flex-start;
 }
-
 form input {
   width: 100%;
   background-color: transparent;
@@ -223,7 +209,6 @@ form input {
   height: 2.5em;
   margin-bottom: 20px;
 }
-
 form textarea {
   width: 100%;
   background-color: transparent;
@@ -237,46 +222,39 @@ input[type="submit"] {
   background-color: #beb45a;
   padding: 0.5em 1em;
 }
-
 .container .filter {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-
 .container button {
   padding: 8px 15px;
   border: none;
   background: #fff;
   cursor: pointer;
 }
-
 .container button.active {
   background: #beb45a;
 }
-
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin-top: 30px;
+  margin-left: -175px;
 }
-
 .card {
   margin-bottom: 10px;
 }
-
 .card img {
   width: 415px;
   height: 415px;
   object-fit: cover;
 }
-
 .hide {
   display: none;
 }
-
 .lightbox {
   position: fixed;
   top: 50%;
@@ -293,13 +271,11 @@ input[type="submit"] {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   overflow: hidden;
 }
-
 .lightbox-img {
   width: 475px;
   height: 630px;
   object-fit: cover;
 }
-
 .close-lightbox {
   position: absolute;
   top: 10px;
@@ -309,7 +285,6 @@ input[type="submit"] {
   cursor: pointer;
   z-index: 10;
 }
-
 .prev-lightbox,
 .next-lightbox {
   position: absolute;
@@ -322,20 +297,23 @@ input[type="submit"] {
   padding: 10px;
   z-index: 10;
 }
-
 .prev-lightbox {
   left: 5px;
 }
 .next-lightbox {
   right: 5px;
 }
-
 .prev-lightbox:hover,
 .next-lightbox:hover,
 .close-lightbox:hover {
   color: #beb45a;
 }
 
+.nina-pic {
+  height: 560px;
+  width: 558px;
+  z-index: 0;
+}
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
@@ -353,7 +331,6 @@ input[type="submit"] {
     width: 100%;
   }
 }
-
 @media all and (max-width: 1000px) {
   #about {
     flex-direction: column;
@@ -386,7 +363,6 @@ input[type="submit"] {
   .service__description {
     margin-bottom: 1em;
   }
-
   #services .container::before {
     width: 30%;
     height: 100%;
@@ -395,7 +371,6 @@ input[type="submit"] {
     left: auto;
     z-index: 0;
   }
-
   #contact .container {
     flex-direction: column;
   }
@@ -411,12 +386,10 @@ input[type="submit"] {
     z-index: -1;
   }
 }
-
 .tags-bar .nav-link.active-tag {
   color: #000;
   background-color: #beb45a;
 }
-
 @media all and (max-width: 650px) {
   .top-header {
     flex-direction: column;
@@ -425,7 +398,7 @@ input[type="submit"] {
   .top-header .nav,
   .top-header .nav ul {
     width: 100%;
-    padding: 0 0 0 0;
+    padding: 0;
   }
   .top-header .nav li {
     flex: 1;
