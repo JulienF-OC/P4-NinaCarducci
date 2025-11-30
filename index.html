@@ -8,17 +8,10 @@
       name="description"
       content="Nina Carducci, photographe professionnelle à Bordeaux. Shooting photo, retouches, albums, événements, entreprises, mariages et portraits. Découvrez mon portfolio et contactez-moi pour un devis."
     />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:wght@300;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:wght@300;800&display=swap" rel="stylesheet">
-</noscript>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:wght@300;800&display=swap"
-      rel="stylesheet"
-    />
+     <link rel="preload" as="image" href="./assets/images/nina@2x.webp" fetchpriority="high" imagesrcset="./assets/images/nina.webp 1x, ./assets/images/nina@2x.webp 2x">
+    <link rel="preload" href="assets/fonts/rnCs-xNNww_2s0amA9uetG3BafY.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/rnCs-xNNww_2s0amA9uSsG3BafY.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" as="style" href="./assets/bootstrap/bootstrap.css" />
     <link rel="preload" as="style" href="./assets/style.css" />
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
@@ -27,6 +20,7 @@
       rel="preload"
       as="image"
       href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
+      fetchpriority="high"
     />
     <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
     <script type="application/ld+json">
@@ -78,6 +72,34 @@
       content="https://stellular-seahorse-c9e469.netlify.app/assets/images/nina.webp"
     />
     <script src="app.js" defer></script>
+    <style>
+    @font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2")
+    format("woff2");
+}
+
+/* Spectral Light */
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/fonts/rnCs-xNNww_2s0amA9uSsG3BafY.woff2") format("woff2");
+}
+
+/* Spectral ExtraBold */
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/assets/fonts/rnCs-xNNww_2s0amA9uetG3BafY.woff2") format("woff2");
+}
+</style>
   </head>
   <body>
     <div class="top-header">
@@ -96,6 +118,8 @@
               ><img
                 src="assets/images/instagram.webp"
                 alt="Logo du reseau social Instagram"
+                width="20"
+     height="20"
             /></a>
           </li>
         </ul>
@@ -131,12 +155,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img
-              src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
-              class="d-block w-100"
-              alt="Photo de Ryoji Iwata"
-              fetchpriority="high"
-              decoding="async"
+            <img src="/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
+     srcset=" /assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1.webp 480w,
+             /assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp 1440w"
+     sizes="100vw"
+     class="d-block w-100" 
+     alt="Photo de Ryoji Iwata" 
+     loading="eager"
             />
           </div>
           <div class="carousel-item">
@@ -177,11 +202,13 @@
     <main>
       <div id="about">
         <div class="nina-pic">
-          <img
-            src="./assets/images/nina.webp"
-            alt="Photo de la photographe Nina Carducci"
-            loading="lazy"
-          />
+        <img src="./assets/images/nina.webp" 
+     srcset="./assets/images/nina.webp 1x,
+             ./assets/images/nina@2x.webp 2x"
+     alt="Photo de la photographe Nina Carducci"
+     width="560"
+     height="558"
+     fetchpriority="high">
         </div>
         <div id="about-me">
           <h2 class="about-me__title">A propos de moi</h2>
@@ -191,7 +218,7 @@
             endroit, une lumière et les rendre immortels, voilà ce qui me fait
             vibrer.
           </p>
-          <p>
+          <p class="about_me_text">
             Nous passons notre vie à chercher le bonheur, et lorsque nous y
             touchons, nous n’avons qu’une envie : le figer au travers de
             photographies pour le savourer avec les personnes qui sont
@@ -217,55 +244,55 @@
           <div class="cards">
             <div class="card" data-name="concert">
               <img
-                src="/assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"
+                src="/assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
                 alt="Photo du concert de Aaron Paul"
               />
             </div>
             <div class="card" data-name="entreprises">
               <img
-                src="/assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplah.jpg"
+                src="/assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplah-2.webp"
                 alt="Photo de ali morshedlou"
               />
             </div>
             <div class="card" data-name="entreprises">
               <img
-                src="/assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
+                src="/assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-1.webp"
                 alt="Photo de Jason Goodman"
               />
             </div>
                  <div class="card" data-name="mariages">
               <img
-                src="/assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unspla.jpg"
+                src="/assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unspla.webp"
                 alt="Photo du mariage de Hannah Busing"
               />
             </div>
             <div class="card" data-name="portrait">
               <img
-                src="/assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash (1).jpg"
+                src="/assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash (1).webp"
                 alt="Photo de ade tunji"
               />
             </div>
             <div class="card" data-name="mariages">
               <img
-                src="/assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash (1).jpg"
+                src="/assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash (1).webp"
                 alt="Photo du mariage de Jakob Owens"
               />
             </div>
                  <div class="card" data-name="portrait">
               <img
-                src="/assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8.jpg"
+                src="/assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8.webp"
                 alt="Photo de Nino van prattenburg"
               />
             </div>
             <div class="card" data-name="concert">
               <img
-                src="/assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
+                src="/assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"
                 alt="Photo du concert de Austin Neill"
               />
             </div>
             <div class="card" data-name="entreprises">
               <img
-                src="/assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY.jpg"
+                src="/assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-1.webp"
                 alt="Photo de mateus campos"
               />
             </div>
@@ -369,7 +396,7 @@
             </form>
           </div>
           <div class="picture right">
-            <img src="./assets/images/camera.webp" alt="Photo d'une camera" loading="lazy"/>
+            <img src="assets/images/camera.webp" alt="Photo d'une camera" loading="lazy"/>
           </div>
         </div>
       </div>

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2")
+    format("woff2");
+}
+
+/* Spectral Light */
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/fonts/rnCs-xNNww_2s0amA9uetG3OafadWQ.woff2") format("woff2");
+}
+
+/* Spectral ExtraBold */
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/assets/fonts/rnCs-xNNww_2s0amA9uSsG3OafadWQ.woff2") format("woff2");
+}

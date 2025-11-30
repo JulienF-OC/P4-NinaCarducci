@@ -78,10 +78,8 @@ body {
   font-weight: 800;
   font-style: italic;
   width: 60%;
-}
-#about-me p {
-  width: 80%;
-  font-size: 14px;
+  color: #000;
+  font-size: 16px;
 }
 .title {
   text-align: center;
@@ -314,6 +312,12 @@ input[type="submit"] {
   width: 558px;
   z-index: 0;
 }
+
+.about_me_text {
+  font-size: 14px;
+  width: 80%;
+}
+
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
