@@ -8,7 +8,17 @@
       name="description"
       content="Nina Carducci, photographe professionnelle à Bordeaux. Shooting photo, retouches, albums, événements, entreprises, mariages et portraits. Découvrez mon portfolio et contactez-moi pour un devis."
     />
-     <link rel="preload" as="image" href="./assets/images/nina@2x.webp" fetchpriority="high" imagesrcset="./assets/images/nina.webp 1x, ./assets/images/nina@2x.webp 2x">
+     <link
+      rel="preload"
+      as="image"
+      href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
+      fetchpriority="high"
+    />
+     <link rel="preload" as="image" 
+      href="./assets/images/nina@2x.webp" 
+      imagesrcset="./assets/images/nina.webp 560w, ./assets/images/nina@2x.webp 1120w"
+      imagesizes="(max-width: 768px) 100vw, 560px"
+      fetchpriority="high">
     <link rel="preload" href="assets/fonts/rnCs-xNNww_2s0amA9uetG3BafY.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/rnCs-xNNww_2s0amA9uSsG3BafY.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,13 +26,6 @@
     <link rel="preload" as="style" href="./assets/style.css" />
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link
-      rel="preload"
-      as="image"
-      href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
-      fetchpriority="high"
-    />
-    <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -71,7 +74,6 @@
       name="twitter:image"
       content="https://stellular-seahorse-c9e469.netlify.app/assets/images/nina.webp"
     />
-    <script src="app.js" defer></script>
     <style>
     @font-face {
   font-family: "Inter";
@@ -98,6 +100,81 @@
   font-weight: 800;
   font-display: swap;
   src: url("/assets/fonts/rnCs-xNNww_2s0amA9uetG3BafY.woff2") format("woff2");
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Inter, sans-serif; }
+
+.top-header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name { font-size: 1.5rem; }
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav a { text-decoration: none; color: #000; }
+
+#about {
+  display: flex;
+  background-color: #f6d2b8;
+  padding: 50px 100px;
+  align-items: center;
+  gap: 50px;
+}
+
+.nina-pic {
+  flex: 0 0 auto;
+  width: 560px;
+}
+
+.nina-pic img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 560px;
+}
+
+#about-me {
+  flex: 1;
+}
+
+.about-me__title {
+  font-family: Spectral, serif;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-me__introduction,
+.about_me_text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  
+  .nina-pic {
+    width: 100%;
+  }
 }
 </style>
   </head>
@@ -162,6 +239,7 @@
      class="d-block w-100" 
      alt="Photo de Ryoji Iwata" 
      loading="eager"
+     fetchpriority="high"
             />
           </div>
           <div class="carousel-item">
@@ -169,6 +247,7 @@
               src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp"
               class="d-block w-100"
               alt="Photo de Nicholas Green"
+              loading="lazy"
             />
           </div>
           <div class="carousel-item">
@@ -176,6 +255,7 @@
               src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
               class="d-block w-100"
               alt="Photo de Edward Cisneros"
+              loading="lazy"
             />
           </div>
         </div>
@@ -208,7 +288,8 @@
      alt="Photo de la photographe Nina Carducci"
      width="560"
      height="558"
-     fetchpriority="high">
+     fetchpriority="high"
+     loading="eager">
         </div>
         <div id="about-me">
           <h2 class="about-me__title">A propos de moi</h2>
@@ -246,54 +327,63 @@
               <img
                 src="/assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
                 alt="Photo du concert de Aaron Paul"
+                loading="lazy"
               />
             </div>
             <div class="card" data-name="entreprises">
               <img
                 src="/assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplah-2.webp"
                 alt="Photo de ali morshedlou"
+                loading="lazy"
               />
             </div>
             <div class="card" data-name="entreprises">
               <img
                 src="/assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-1.webp"
                 alt="Photo de Jason Goodman"
+                loading="lazy"
               />
             </div>
                  <div class="card" data-name="mariages">
               <img
                 src="/assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unspla.webp"
                 alt="Photo du mariage de Hannah Busing"
+                loading="lazy"
               />
             </div>
             <div class="card" data-name="portrait">
               <img
                 src="/assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash (1).webp"
                 alt="Photo de ade tunji"
+                loading="lazy"
               />
             </div>
             <div class="card" data-name="mariages">
               <img
                 src="/assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash (1).webp"
                 alt="Photo du mariage de Jakob Owens"
+                loading="lazy"
               />
             </div>
                  <div class="card" data-name="portrait">
               <img
                 src="/assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8.webp"
                 alt="Photo de Nino van prattenburg"
+                loading="lazy"
               />
             </div>
             <div class="card" data-name="concert">
               <img
                 src="/assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"
                 alt="Photo du concert de Austin Neill"
+                loading="lazy"
               />
             </div>
             <div class="card" data-name="entreprises">
               <img
                 src="/assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-1.webp"
                 alt="Photo de mateus campos"
+                loading="lazy"
               />
             </div>
         </div>
@@ -407,6 +497,7 @@
   <span class="next-lightbox">&#10095;</span>
   <img class="lightbox-img" src="" alt="">
 </div>
-
+<script src="./assets/bootstrap/bootstrap.bundle.min.js" async></script>
+<script src="app.js" async></script>
   </body>
 </html>
