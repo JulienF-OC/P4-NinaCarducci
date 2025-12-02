@@ -54,11 +54,3 @@ nextBtn.addEventListener("click", (e) => {
   currentIndex = (currentIndex + 1) % images.length;
   lightboxImg.src = images[currentIndex].src;
 });
-
-document.addEventListener("keydown", (e) => {
-  if (lightbox.style.display === "flex") {
-    if (e.key === "ArrowLeft") prevBtn.click();
-    if (e.key === "ArrowRight") nextBtn.click();
-    if (e.key === "Escape") closeBtn.click();
-  }
-});
