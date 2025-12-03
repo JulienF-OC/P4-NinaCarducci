@@ -1,6 +1,7 @@
 const btns = document.querySelectorAll(".filter button");
 const cards = document.querySelectorAll(".card");
 
+//Fonction qui permets l'ajout de l'attribbut active sur l'element selectionner et le retire aux autres//
 btns.forEach((button) => {
   button.addEventListener("click", (e) => {
     btns.forEach((b) => b.classList.remove("active"));
@@ -25,6 +26,7 @@ const nextBtn = document.querySelector(".next-lightbox");
 
 let currentIndex = 0;
 
+//Création d'une lightbox//
 images.forEach((img, index) => {
   img.addEventListener("click", () => {
     currentIndex = index;
@@ -42,6 +44,8 @@ lightbox.addEventListener("click", (e) => {
     lightbox.style.display = "none";
   }
 });
+
+//On va gérer ici les images qui précéde et qui suivent//
 
 prevBtn.addEventListener("click", (e) => {
   e.stopPropagation();
