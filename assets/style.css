@@ -318,6 +318,13 @@ input[type="submit"] {
   width: 80%;
 }
 
+footer p {
+  display: flex;
+  align-items: center;
+  margin-left: 760px;
+  margin-top: 30px;
+}
+
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
